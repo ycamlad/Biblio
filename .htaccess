@@ -1,0 +1,10 @@
+RewriteEngine On
+
+#evite d'aller sur un dossier ou fichier
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteRule ^/(.*)$ index.php?page=$1
+
